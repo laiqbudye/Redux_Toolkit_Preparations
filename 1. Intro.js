@@ -19,3 +19,13 @@ pkgs that comes with RTK in its dependencies:
 THIS IS FOR DEVELOPMENT USE ONLY, DONT USE IT IN PRODUCTION, IT WILL DEGRADE THE PERFORMANCE OF YOUR APP.
   
 4. & some more pkgs. to see it you can checkout pkg.json file of RTK.
+
+
+to install:- 
+  1. npm i @redux/toolkit
+
+  2. if we want to download that with create-react-app as a template
+    npx create-react-app my-app --template redux    <-- it will also dwnload react-redux pkg so we dont need to add that externally.
+
+
+
