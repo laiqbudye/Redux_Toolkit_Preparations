@@ -65,3 +65,20 @@ o/p =>   {
      createdAt: '2019-10-03T07:53:36.581Z'
    }
 }
+
+
+-------------------------------------------------------------------------------------------------------------------------------
+  Usage with useReducer
+  
+  import { createAction, createReducer } from '@reduxjs/toolkit'
+
+  const increment = createAction('counter/increment')
+  const decrement = createAction('counter/decrement')
+
+  const counterReducer = createReducer(initialState, (builder) => {
+    builder.addCase(increment, (state, action) => state + action.payload)     // here it internally calls increment.toString(), so we can pass action creator function directly as a key
+    builder.addCase(decrement, (state, action) => state - action.payload)
+  })
+  
+  
+  
