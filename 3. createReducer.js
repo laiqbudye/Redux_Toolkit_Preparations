@@ -1,7 +1,22 @@
 createReducer 
   is a function which simplifies process of creating redux reducers.
   it used IMMER internally which allows us to update state in a mutative way. (IMP:- we can update a state in mutable way using immer but behind the scenes immer handles that in a immutable way)
-  
+  e.g
+    const state = {
+      arr = [1,2,3,4]
+    }
+
+    1. updating state in immutable way
+    
+        return {
+          ...state,
+          arr = [...state.arr, 5]
+        }
+    
+    2. updating state in mutable way (with IMMER)
+          
+        state.arr.push(5);  // here we have pushed directly into array, but behind the scenes IMMER will handle that in a immutable way.
+
 
   e.g 
     tranditional way of writing reducer where we write switch cases for each n every action type
